@@ -106,10 +106,14 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kb_8c_mh41d58bg056b0ts_fjdr0000gn_T_ZYNumberTest_6281b8_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"this is great",13};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kb_8c_mh41d58bg056b0ts_fjdr0000gn_T_ZYNumberTest_6281b8_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"--ZYNumberTest-- checkTheThings --",34};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kb_8c_mh41d58bg056b0ts_fjdr0000gn_T_ZYNumberTest_6281b8_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"--ZYNumberTest--checkTheThingsWithParameters --%@",49};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_kb_8c_mh41d58bg056b0ts_fjdr0000gn_T_ZYNumberTest_6281b8_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"--ZYNumberTest--userClassMethod --",34};
+
+
+
+
+
+
+
+
 
 
 
@@ -97790,10 +97794,8 @@ typedef struct objc_object ZYNumberTest;
 typedef struct {} _objc_exc_ZYNumberTest;
 #endif
 
-extern "C" unsigned long OBJC_IVAR_$_ZYNumberTest$_abc;
 struct ZYNumberTest_IMPL {
 	struct NSNumber_IMPL NSNumber_IVARS;
-	int _abc;
 };
 
 
@@ -97802,48 +97804,39 @@ struct ZYNumberTest_IMPL {
 
 // - (void)checkTheThings;
 // - (void)checkTheThingsWithParameters:(NSString *)parameters;
-// - (void)fatherMethodForThis;
 // + (void)useClassMethod;
-// + (void)fatherClassMethod;
 
 /* @end */
 
 
-static NSInteger staticIntegerA = 10;
-static NSString *staticSrtringA = (NSString *)&__NSConstantStringImpl__var_folders_kb_8c_mh41d58bg056b0ts_fjdr0000gn_T_ZYNumberTest_6281b8_mi_0;
+// @interface ZYNumberTest (ZY)
+
+// -(void)userCatergory;
+// -(void)userCatergoryWithParameters:(NSString *)parameters;
+// +(void)userClassMethodForCatergory;
+
+/* @end */
 
 
-// @implementation ZYNumberTest
+// @implementation ZYNumberTest (ZY)
 
 
-static void _I_ZYNumberTest_checkTheThings(ZYNumberTest * self, SEL _cmd) {
-
-
-
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_kb_8c_mh41d58bg056b0ts_fjdr0000gn_T_ZYNumberTest_6281b8_mi_1);
-}
-
-static void _I_ZYNumberTest_checkTheThingsWithParameters_(ZYNumberTest * self, SEL _cmd, NSString *parameters) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_kb_8c_mh41d58bg056b0ts_fjdr0000gn_T_ZYNumberTest_6281b8_mi_2, parameters);
-}
-
-
-static void _C_ZYNumberTest_useClassMethod(Class self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_kb_8c_mh41d58bg056b0ts_fjdr0000gn_T_ZYNumberTest_6281b8_mi_3);
-}
-
-
-static void _I_ZYNumberTest_fatherMethodForThis(ZYNumberTest * self, SEL _cmd) {
+static void _I_ZYNumberTest_ZY_userCatergory(ZYNumberTest * self, SEL _cmd) {
 
 }
 
 
-static void _C_ZYNumberTest_fatherClassMethod(Class self, SEL _cmd) {
+static void _I_ZYNumberTest_ZY_userCatergoryWithParameters_(ZYNumberTest * self, SEL _cmd, NSString *parameters) {
 
 }
 
-static int _I_ZYNumberTest_abc(ZYNumberTest * self, SEL _cmd) { return (*(int *)((char *)self + OBJC_IVAR_$_ZYNumberTest$_abc)); }
-static void _I_ZYNumberTest_setAbc_(ZYNumberTest * self, SEL _cmd, int abc) { (*(int *)((char *)self + OBJC_IVAR_$_ZYNumberTest$_abc)) = abc; }
+
+static void _C_ZYNumberTest_ZY_userClassMethodForCatergory(Class self, SEL _cmd) {
+
+}
+
+
+
 // @end
 
 struct _prop_t {
@@ -97914,110 +97907,46 @@ struct _category_t {
 extern "C" __declspec(dllimport) struct objc_cache _objc_empty_cache;
 #pragma warning(disable:4273)
 
-extern "C" unsigned long int OBJC_IVAR_$_ZYNumberTest$_abc __attribute__ ((used, section ("__DATA,__objc_ivar"))) = __OFFSETOFIVAR__(struct ZYNumberTest, _abc);
-
-static struct /*_ivar_list_t*/ {
-	unsigned int entsize;  // sizeof(struct _prop_t)
-	unsigned int count;
-	struct _ivar_t ivar_list[1];
-} _OBJC_$_INSTANCE_VARIABLES_ZYNumberTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	sizeof(_ivar_t),
-	1,
-	{{(unsigned long int *)&OBJC_IVAR_$_ZYNumberTest$_abc, "_abc", "i", 2, 4}}
-};
-
-static struct /*_method_list_t*/ {
-	unsigned int entsize;  // sizeof(struct _objc_method)
-	unsigned int method_count;
-	struct _objc_method method_list[5];
-} _OBJC_$_INSTANCE_METHODS_ZYNumberTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	sizeof(_objc_method),
-	5,
-	{{(struct objc_selector *)"checkTheThings", "v16@0:8", (void *)_I_ZYNumberTest_checkTheThings},
-	{(struct objc_selector *)"checkTheThingsWithParameters:", "v24@0:8@16", (void *)_I_ZYNumberTest_checkTheThingsWithParameters_},
-	{(struct objc_selector *)"fatherMethodForThis", "v16@0:8", (void *)_I_ZYNumberTest_fatherMethodForThis},
-	{(struct objc_selector *)"abc", "i16@0:8", (void *)_I_ZYNumberTest_abc},
-	{(struct objc_selector *)"setAbc:", "v20@0:8i16", (void *)_I_ZYNumberTest_setAbc_}}
-};
-
 static struct /*_method_list_t*/ {
 	unsigned int entsize;  // sizeof(struct _objc_method)
 	unsigned int method_count;
 	struct _objc_method method_list[2];
-} _OBJC_$_CLASS_METHODS_ZYNumberTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+} _OBJC_$_CATEGORY_INSTANCE_METHODS_ZYNumberTest_$_ZY __attribute__ ((used, section ("__DATA,__objc_const"))) = {
 	sizeof(_objc_method),
 	2,
-	{{(struct objc_selector *)"useClassMethod", "v16@0:8", (void *)_C_ZYNumberTest_useClassMethod},
-	{(struct objc_selector *)"fatherClassMethod", "v16@0:8", (void *)_C_ZYNumberTest_fatherClassMethod}}
+	{{(struct objc_selector *)"userCatergory", "v16@0:8", (void *)_I_ZYNumberTest_ZY_userCatergory},
+	{(struct objc_selector *)"userCatergoryWithParameters:", "v24@0:8@16", (void *)_I_ZYNumberTest_ZY_userCatergoryWithParameters_}}
 };
 
-static struct /*_prop_list_t*/ {
-	unsigned int entsize;  // sizeof(struct _prop_t)
-	unsigned int count_of_properties;
-	struct _prop_t prop_list[1];
-} _OBJC_$_PROP_LIST_ZYNumberTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	sizeof(_prop_t),
+static struct /*_method_list_t*/ {
+	unsigned int entsize;  // sizeof(struct _objc_method)
+	unsigned int method_count;
+	struct _objc_method method_list[1];
+} _OBJC_$_CATEGORY_CLASS_METHODS_ZYNumberTest_$_ZY __attribute__ ((used, section ("__DATA,__objc_const"))) = {
+	sizeof(_objc_method),
 	1,
-	{{"abc","Ti,N,V_abc"}}
+	{{(struct objc_selector *)"userClassMethodForCatergory", "v16@0:8", (void *)_C_ZYNumberTest_ZY_userClassMethodForCatergory}}
 };
 
-static struct _class_ro_t _OBJC_METACLASS_RO_$_ZYNumberTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	1, sizeof(struct _class_t), sizeof(struct _class_t), 
-	(unsigned int)0, 
-	0, 
+extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_ZYNumberTest;
+
+static struct _category_t _OBJC_$_CATEGORY_ZYNumberTest_$_ZY __attribute__ ((used, section ("__DATA,__objc_const"))) = 
+{
 	"ZYNumberTest",
-	(const struct _method_list_t *)&_OBJC_$_CLASS_METHODS_ZYNumberTest,
-	0, 
-	0, 
-	0, 
-	0, 
+	0, // &OBJC_CLASS_$_ZYNumberTest,
+	(const struct _method_list_t *)&_OBJC_$_CATEGORY_INSTANCE_METHODS_ZYNumberTest_$_ZY,
+	(const struct _method_list_t *)&_OBJC_$_CATEGORY_CLASS_METHODS_ZYNumberTest_$_ZY,
+	0,
+	0,
 };
-
-static struct _class_ro_t _OBJC_CLASS_RO_$_ZYNumberTest __attribute__ ((used, section ("__DATA,__objc_const"))) = {
-	0, __OFFSETOFIVAR__(struct ZYNumberTest, _abc), sizeof(struct ZYNumberTest_IMPL), 
-	(unsigned int)0, 
-	0, 
-	"ZYNumberTest",
-	(const struct _method_list_t *)&_OBJC_$_INSTANCE_METHODS_ZYNumberTest,
-	0, 
-	(const struct _ivar_list_t *)&_OBJC_$_INSTANCE_VARIABLES_ZYNumberTest,
-	0, 
-	(const struct _prop_list_t *)&_OBJC_$_PROP_LIST_ZYNumberTest,
-};
-
-extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSNumber;
-extern "C" __declspec(dllimport) struct _class_t OBJC_METACLASS_$_NSObject;
-
-extern "C" __declspec(dllexport) struct _class_t OBJC_METACLASS_$_ZYNumberTest __attribute__ ((used, section ("__DATA,__objc_data"))) = {
-	0, // &OBJC_METACLASS_$_NSObject,
-	0, // &OBJC_METACLASS_$_NSNumber,
-	0, // (void *)&_objc_empty_cache,
-	0, // unused, was (void *)&_objc_empty_vtable,
-	&_OBJC_METACLASS_RO_$_ZYNumberTest,
-};
-
-extern "C" __declspec(dllimport) struct _class_t OBJC_CLASS_$_NSNumber;
-
-extern "C" __declspec(dllexport) struct _class_t OBJC_CLASS_$_ZYNumberTest __attribute__ ((used, section ("__DATA,__objc_data"))) = {
-	0, // &OBJC_METACLASS_$_ZYNumberTest,
-	0, // &OBJC_CLASS_$_NSNumber,
-	0, // (void *)&_objc_empty_cache,
-	0, // unused, was (void *)&_objc_empty_vtable,
-	&_OBJC_CLASS_RO_$_ZYNumberTest,
-};
-static void OBJC_CLASS_SETUP_$_ZYNumberTest(void ) {
-	OBJC_METACLASS_$_ZYNumberTest.isa = &OBJC_METACLASS_$_NSObject;
-	OBJC_METACLASS_$_ZYNumberTest.superclass = &OBJC_METACLASS_$_NSNumber;
-	OBJC_METACLASS_$_ZYNumberTest.cache = &_objc_empty_cache;
-	OBJC_CLASS_$_ZYNumberTest.isa = &OBJC_METACLASS_$_ZYNumberTest;
-	OBJC_CLASS_$_ZYNumberTest.superclass = &OBJC_CLASS_$_NSNumber;
-	OBJC_CLASS_$_ZYNumberTest.cache = &_objc_empty_cache;
+static void OBJC_CATEGORY_SETUP_$_ZYNumberTest_$_ZY(void ) {
+	_OBJC_$_CATEGORY_ZYNumberTest_$_ZY.cls = &OBJC_CLASS_$_ZYNumberTest;
 }
 #pragma section(".objc_inithooks$B", long, read, write)
-__declspec(allocate(".objc_inithooks$B")) static void *OBJC_CLASS_SETUP[] = {
-	(void *)&OBJC_CLASS_SETUP_$_ZYNumberTest,
+__declspec(allocate(".objc_inithooks$B")) static void *OBJC_CATEGORY_SETUP[] = {
+	(void *)&OBJC_CATEGORY_SETUP_$_ZYNumberTest_$_ZY,
 };
-static struct _class_t *L_OBJC_LABEL_CLASS_$ [1] __attribute__((used, section ("__DATA, __objc_classlist,regular,no_dead_strip")))= {
-	&OBJC_CLASS_$_ZYNumberTest,
+static struct _category_t *L_OBJC_LABEL_CATEGORY_$ [1] __attribute__((used, section ("__DATA, __objc_catlist,regular,no_dead_strip")))= {
+	&_OBJC_$_CATEGORY_ZYNumberTest_$_ZY,
 };
 static struct IMAGE_INFO { unsigned version; unsigned flag; } _OBJC_IMAGE_INFO = { 0, 2 };

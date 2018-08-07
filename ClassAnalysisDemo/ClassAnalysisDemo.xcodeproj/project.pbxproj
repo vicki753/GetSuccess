@@ -20,6 +20,7 @@
 		3D389EC82112C44D0029BDFA /* ZYNumberTestSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389EC72112C44D0029BDFA /* ZYNumberTestSubClass.m */; };
 		3D389ECE2112D5F40029BDFA /* ZYNumberTestSubClass+ZY.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389ECD2112D5F40029BDFA /* ZYNumberTestSubClass+ZY.m */; };
 		3D389ED1211306240029BDFA /* ZYObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389ED0211306240029BDFA /* ZYObjectTest.m */; };
+		3D389F142116E2A50029BDFA /* ZYObjectTestTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D389F132116E2A50029BDFA /* ZYObjectTestTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		3D389ECD2112D5F40029BDFA /* ZYNumberTestSubClass+ZY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZYNumberTestSubClass+ZY.m"; sourceTree = "<group>"; };
 		3D389ECF211306240029BDFA /* ZYObjectTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYObjectTest.h; sourceTree = "<group>"; };
 		3D389ED0211306240029BDFA /* ZYObjectTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYObjectTest.m; sourceTree = "<group>"; };
+		3D389F122116E2A50029BDFA /* ZYObjectTestTwo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYObjectTestTwo.h; sourceTree = "<group>"; };
+		3D389F132116E2A50029BDFA /* ZYObjectTestTwo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYObjectTestTwo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 				3D389ECD2112D5F40029BDFA /* ZYNumberTestSubClass+ZY.m */,
 				3D389ECF211306240029BDFA /* ZYObjectTest.h */,
 				3D389ED0211306240029BDFA /* ZYObjectTest.m */,
+				3D389F122116E2A50029BDFA /* ZYObjectTestTwo.h */,
+				3D389F132116E2A50029BDFA /* ZYObjectTestTwo.m */,
 			);
 			path = FoundationTest;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D389F142116E2A50029BDFA /* ZYObjectTestTwo.m in Sources */,
 				3D389E8D2112C1980029BDFA /* ViewController.m in Sources */,
 				3D389EC22112C3820029BDFA /* ZYNumberTest.m in Sources */,
 				3D389ECE2112D5F40029BDFA /* ZYNumberTestSubClass+ZY.m in Sources */,

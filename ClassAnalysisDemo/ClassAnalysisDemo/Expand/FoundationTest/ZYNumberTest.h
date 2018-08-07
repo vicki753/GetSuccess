@@ -15,6 +15,8 @@
 
 - (void)checkTheThings;
 - (void)checkTheThingsWithParameters:(NSString *)parameters;
+- (void)fatherMethodForThis;
 + (void)useClassMethod;
++ (void)fatherClassMethod;
 
 @end

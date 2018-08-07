@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface ZYObjectTest : NSObject
+
+@property (nonatomic, assign)CGFloat cornerRadius;
 
 @end

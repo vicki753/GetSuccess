@@ -28,4 +28,11 @@ static NSString *staticSrtringA = @"this is great";
     NSLog(@"--ZYNumberTest--userClassMethod --");
 }
 
+- (void)fatherMethodForThis{
+    
+}
+
++ (void)fatherClassMethod {
+    
+}
 @end

@@ -10,18 +10,25 @@
 
 @implementation ZYNumberTestSubClass (ZY)
 
-//- (void)checkTheThings {
-//    //    int a = 1;
-//    //    int b = 2;
-//    //    int c = a + b;
-//    NSLog(@"--ZYNumberTestSubClass (ZY) -- checkTheThings --");
-//}
-//- (void)checkTheThingsWithParameters:(NSString *)parameters {
-//    NSLog(@"--ZYNumberTestSubClass (ZY)--checkTheThingsWithParameters --%@", parameters);
-//}
-//
-//+ (void)useClassMethod {
-//    NSLog(@"--ZYNumberTestSubClass (ZY) --userClassMethod --");
-//}
+- (void)checkTheThings {
+    //    int a = 1;
+    //    int b = 2;
+    //    int c = a + b;
+    NSLog(@"--ZYNumberTestSubClass (ZY) -- checkTheThings --");
+}
+- (void)checkTheThingsWithParameters:(NSString *)parameters {
+    NSLog(@"--ZYNumberTestSubClass (ZY)--checkTheThingsWithParameters --%@", parameters);
+}
+
++ (void)useClassMethod {
+    NSLog(@"--ZYNumberTestSubClass (ZY) --userClassMethod --");
+}
+
+- (void)thisIsCategoryInstanceMethod {
+    
+}
++(void)thisIsCategoryClassMethod {
+    
+}
 
 @end

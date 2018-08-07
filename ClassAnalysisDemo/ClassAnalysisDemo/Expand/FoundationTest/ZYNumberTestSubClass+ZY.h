@@ -10,4 +10,7 @@
 
 @interface ZYNumberTestSubClass (ZY)
 
+- (void)thisIsCategoryInstanceMethod;
++(void)thisIsCategoryClassMethod;
+
 @end

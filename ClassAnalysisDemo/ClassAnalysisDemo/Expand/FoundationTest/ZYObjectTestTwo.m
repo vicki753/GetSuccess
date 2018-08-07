@@ -1,17 +1,19 @@
 //
-//  ZYNumberTestSubClass.m
+//  ZYObjectTestTwo.m
 //  ClassAnalysisDemo
 //
-//  Created by 郑奕 on 2018/8/2.
+//  Created by 郑奕 on 2018/8/5.
 //  Copyright © 2018 郑奕. All rights reserved.
 //
 
-#import "ZYNumberTestSubClass.h"
+#import "ZYObjectTestTwo.h"
 #import <objc/objc.h>
 #import <objc/runtime.h>
 
 
-@implementation ZYNumberTestSubClass
+
+@implementation ZYObjectTestTwo
+
 - (instancetype)init {
     if (self = [super init]) {
         
@@ -32,29 +34,8 @@
         NSLog(@"NSObject's object_getClass is %p", object_getClass([NSObject class]));
         const char *objectName = object_getClassName([NSObject class]);
         NSLog(@"NSObject's meta class is %p", objc_getMetaClass(objectName));
-        
+      
     }
     return self;
 }
-
-
-//
-//- (void)checkTheThings {
-//    NSLog(@" ZYNumberTestSubClass ======  checkTheThings ========");
-//}
-//
-//-(void)checkTheThingsWithParameters:(NSString *)parameters {
-//    NSLog(@" ZYNumberTestSubClass ======  checkTheThingsWithParameters ========%@", parameters);
-//}
-//
-//+(void)useClassMethod {
-//    NSLog(@" ZYNumberTestSubClass ======  useClassMethod ========");
-//}
-//
-
--(NSString *)description {
-    return [super description];
-}
-
-
 @end

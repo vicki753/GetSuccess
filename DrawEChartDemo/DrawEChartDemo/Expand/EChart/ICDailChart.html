@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+            <title></title>
+            <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <script type="text/javascript" src="echarts.js" ></script>
+            </head>
+    
+    <style type="text/css">
+        
+        .chart {
+            height: 400px;
+            margin: 0px 0px;
+            padding: 0px;
+        }
+    </style>
+    
+    <body>
+        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+        <div class="mui-content">
+            <div class="chart" id="main"></div>
+        </div>
+        <script type="text/javascript">
+            var lightDataArr = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天'];
+            // 基于准备好的dom，初始化echarts实例
+            var lightDataDict = [{
+                                 value: 15,
+                                 name: '星期一'
+                                 },
+                                 {
+                                 value: 14,
+                                 name: '星期二'
+                                 },
+                                 {
+                                 value: 13,
+                                 name: '星期三'
+                                 },
+                                 {
+                                 value: 17,
+                                 name: '星期四'
+                                 },
+                                 {
+                                 value: 12,
+                                 name: '星期五'
+                                 },
+                                 {
+                                 value: 18,
+                                 name: '星期六'
+                                 },
+                                 {
+                                 value: 11,
+                                 name: '星期天'
+                                 }
+                                 ];
+                                 var myChart = echarts.init(document.getElementById('main'));
+                                 function chartOption(chartType, xAxisData, seriesData) {
+                                     return {
+                                         title: {
+                                             text: '一周工作量情况',
+                                             subtext: '数据模拟',
+                                             x: 'center'
+                                         },
+                                         tooltip: {
+                                             trigger: 'item',
+                                             formatter: "{a} <br/>{b} : {c} ({d}%)"
+                                         },
+                                         legend: {
+                                             orient: 'vertical',
+                                             left: 'left',
+                                             //                        data: lightDataArr
+                                         },
+                                         series: [{
+                                                  name: '访问来源',
+                                                  type: chartType,
+                                                  radius: '55%',
+                                                  center: ['50%', '60%'],
+                                                  data: seriesData,
+                                                  itemStyle: {
+                                                  emphasis: {
+                                                  shadowBlur: 10,
+                                                  shadowOffsetX: 0,
+                                                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                                  }
+                                                  }
+                                                  }]
+                                     };
+                                 }
+        function  dialChartOption (myRate1) {
+ 
+           return {
+                backgroundColor: '#FFFFFF',
+                tooltip: {
+                    show: true,
+                },
+                series: [{
+                         type: 'gauge',
+                         center: ['50%', '40%'], // 默认全局居中
+                         radius: '60%',
+                         splitNumber: 14, //刻度数量
+                         min: 33.5,
+                         max: 40.5,
+                         startAngle: 200,
+                         endAngle: -20,
+                         clockwise: true,
+                         axisLine: {
+                         show: true,
+                         lineStyle: {
+                         width: 2,
+                         shadowBlur: 0,
+                         color: [
+                                 [1, '#A8A8A8']
+                                 ]
+                         }
+                         },
+                         axisTick: {
+                         show: true,
+                         lineStyle: {
+                         color: '#A8A8A8',
+                         width: 1
+                         },
+                         length: -15,
+                         splitNumber: 5
+                         },
+                         splitLine: {
+                         show: true,
+                         length: -20,
+                         lineStyle: {
+                         color: '#666666',
+                         }
+                         },
+                         axisLabel: {
+                         distance: -25,
+                         textStyle: {
+                         color: "#A8A8A8",
+                         fontSize: "15",
+                         fontWeight: "bold"
+                         }
+                         },
+                         pointer: {
+                         // width:10,
+                         // length: '20%'
+                         show:false
+                         },
+                         detail: {
+                         show: false
+                         },
+                         data: [{
+                                name: "",
+                                value: myRate1
+                                }]
+                         }, {
+                         startAngle: 200,
+                         endAngle: -20,
+                         type: 'gauge',
+                         center: ['50%', '40%'], // 默认全局居中
+                         radius: '55%',
+                         min: 33.5,
+                         max: 40.5,
+                         splitNumber: 0,
+                         axisLine: { // 坐标轴线
+                         lineStyle: {
+                         color: [
+                                 [0.66, '#dddddd'],
+                                 [1, '#dddddd']
+                                 ], // 属性lineStyle控制线条样式
+                         width: 4
+                         }
+                         },
+                         
+                         
+                         axisLabel: { // 坐标轴小标记
+                         textStyle: { // 属性lineStyle控制线条样式
+                         fontWeight: 'bolder',
+                         fontSize: 16,
+                         color: 'rgba(30,144,255,0)',
+                         }
+                         },
+                         splitLine: { // 分隔线
+                         length: 10, // 属性length控制线长
+                         lineStyle: { // 属性lineStyle（详见lineStyle）控制线条样式
+                         width: 0,
+                         color: '#444'
+                         }
+                         },
+                         
+                         
+                         detail: {
+                         show: false
+                         },
+                         
+                         }, {
+                         name: '累计受理',
+                         type: 'gauge',
+                         startAngle: 200,
+                         endAngle: -20,
+                         radius: '48%',
+                         center: ['50%', '40%'], // 默认全局居中
+                         
+                         min: 33.5,
+                         max: 40.5,
+                         
+                         
+                         axisLine: {
+                         show: true,
+                         lineStyle: {
+                         width: 40,
+                         shadowBlur: 0,
+                         color: [
+                                 [15/70, '#47B5E8'],
+                                 [30/70, '#17B17F'],
+                                 [40/70, '#30D439'],
+                                 [50/70, '#FDA809'],
+                                 [65/70, '#FD7708'],
+                                 [70/70, '#FB3D08']
+                                 ]
+                         }
+                         },
+                         
+                         axisTick: {
+                         show: false,
+                         
+                         },
+                         splitLine: {
+                         show: false,
+                         length: 10,
+                         
+                         },
+                         
+                         axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+                         formatter: function(v){
+                         switch (v+''){
+                         case '34.25': return '偏冷';
+                         case '35.5': return '较低';
+                         case '37': return '正常';
+                         case '38': return '偏高';
+                         case '39.25': return '特高';
+                         case '40.25': return '极高';
+                         default: return '';
+                         }
+                         },
+                         textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                         color: '#fff',
+                         fontSize: 12,
+                         fontWeight: 'bolder'
+                         }
+                         },
+                         
+                         pointer: {
+                         show: true,
+                         },
+                         detail: {
+                         show: true,
+                         offsetCenter: [0, '40%'],
+                         textStyle: {
+                         fontSize: 30
+                         }
+                         },
+                         itemStyle: {
+                         normal: {
+                         color: "#666666",
+                         }
+                         },
+                         data: [{
+                                value: myRate1
+                                }]
+                         }
+                         
+                         ]
+            };
+            
+        }
+        
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(dialChartOption(40));
+            </script>
+    </body>
+    
+</html>

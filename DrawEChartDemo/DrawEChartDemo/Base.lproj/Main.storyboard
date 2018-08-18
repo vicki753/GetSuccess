@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mOD-dr-TMC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mUx-yp-UOl">
+            <objects>
+                <navigationController id="mOD-dr-TMC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="20C-VI-vyO">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mON-dR-iRK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dL-Q6-FVA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1306" y="31"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BQI-x5-BOK">
+                                <rect key="frame" x="0.0" y="81" width="129" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9QZ-Ws-PnI"/>
+                                    <constraint firstAttribute="width" secondItem="BQI-x5-BOK" secondAttribute="height" multiplier="43:10" id="fBX-Sg-yHH"/>
+                                </constraints>
+                                <state key="normal" title="折线图"/>
+                                <connections>
+                                    <action selector="lineChartAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rhJ-tY-P0P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEy-f2-hJ8">
+                                <rect key="frame" x="0.0" y="157" width="119" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JEy-f2-hJ8" secondAttribute="height" multiplier="119:30" id="Em8-Ly-ILr"/>
+                                    <constraint firstAttribute="height" constant="30" id="zuM-ri-gge"/>
+                                </constraints>
+                                <state key="normal" title="仪表盘"/>
+                                <connections>
+                                    <action selector="dailChartAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfE-4c-0BK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JEy-f2-hJ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Cp-oS-XXn"/>
+                            <constraint firstItem="BQI-x5-BOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LYU-NF-IyW"/>
+                            <constraint firstItem="JEy-f2-hJ8" firstAttribute="top" secondItem="BQI-x5-BOK" secondAttribute="bottom" constant="46" id="fG0-ne-jYH"/>
+                            <constraint firstItem="BQI-x5-BOK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="ynO-25-DTJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Epm-in-QfH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343" y="30"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,763 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DB3D42C2129765700EE0149 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D42B2129765700EE0149 /* AppDelegate.m */; };
+		3DB3D42F2129765700EE0149 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D42E2129765700EE0149 /* ViewController.m */; };
+		3DB3D4322129765700EE0149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB3D4302129765700EE0149 /* Main.storyboard */; };
+		3DB3D4342129765800EE0149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DB3D4332129765800EE0149 /* Assets.xcassets */; };
+		3DB3D4372129765800EE0149 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DB3D4352129765800EE0149 /* LaunchScreen.storyboard */; };
+		3DB3D43A2129765800EE0149 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D4392129765800EE0149 /* main.m */; };
+		3DB3D4442129765900EE0149 /* ZYIQKeyboardManagerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D4432129765900EE0149 /* ZYIQKeyboardManagerDemoTests.m */; };
+		3DB3D44F2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D44E2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests.m */; };
+		3DB3D46121297A9000EE0149 /* ZYTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D46021297A9000EE0149 /* ZYTableViewController.m */; };
+		3DB3D46521297F4700EE0149 /* ZYScrollAndViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3D46321297F4700EE0149 /* ZYScrollAndViewViewController.m */; };
+		3DB3D46621297F4700EE0149 /* ZYScrollAndViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DB3D46421297F4700EE0149 /* ZYScrollAndViewViewController.xib */; };
+		6FD7CDCBD3AF7B7E4ABE3E07 /* libPods-ZYIQKeyboardManagerDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FB49EE1556E31362C907B54 /* libPods-ZYIQKeyboardManagerDemoUITests.a */; };
+		94EEF45885442B60D066283B /* libPods-ZYIQKeyboardManagerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC388816F04343F01CD824FE /* libPods-ZYIQKeyboardManagerDemoTests.a */; };
+		E055EFF547BDCCBC5A9198B9 /* libPods-ZYIQKeyboardManagerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2515363CE7ADC281F2738119 /* libPods-ZYIQKeyboardManagerDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DB3D4402129765900EE0149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DB3D41F2129765700EE0149 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DB3D4262129765700EE0149;
+			remoteInfo = ZYIQKeyboardManagerDemo;
+		};
+		3DB3D44B2129765900EE0149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DB3D41F2129765700EE0149 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DB3D4262129765700EE0149;
+			remoteInfo = ZYIQKeyboardManagerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FB49EE1556E31362C907B54 /* libPods-ZYIQKeyboardManagerDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYIQKeyboardManagerDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2515363CE7ADC281F2738119 /* libPods-ZYIQKeyboardManagerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYIQKeyboardManagerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A3C10D081111CDCFEB2144B /* Pods-ZYIQKeyboardManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYIQKeyboardManagerDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYIQKeyboardManagerDemo/Pods-ZYIQKeyboardManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		3DB3D4272129765700EE0149 /* ZYIQKeyboardManagerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYIQKeyboardManagerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB3D42A2129765700EE0149 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3DB3D42B2129765700EE0149 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3DB3D42D2129765700EE0149 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3DB3D42E2129765700EE0149 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3DB3D4312129765700EE0149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3DB3D4332129765800EE0149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3DB3D4362129765800EE0149 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3DB3D4382129765800EE0149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB3D4392129765800EE0149 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DB3D43F2129765900EE0149 /* ZYIQKeyboardManagerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYIQKeyboardManagerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB3D4432129765900EE0149 /* ZYIQKeyboardManagerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYIQKeyboardManagerDemoTests.m; sourceTree = "<group>"; };
+		3DB3D4452129765900EE0149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB3D44A2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYIQKeyboardManagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB3D44E2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYIQKeyboardManagerDemoUITests.m; sourceTree = "<group>"; };
+		3DB3D4502129765900EE0149 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DB3D45F21297A9000EE0149 /* ZYTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTableViewController.h; sourceTree = "<group>"; };
+		3DB3D46021297A9000EE0149 /* ZYTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTableViewController.m; sourceTree = "<group>"; };
+		3DB3D46221297F4700EE0149 /* ZYScrollAndViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYScrollAndViewViewController.h; sourceTree = "<group>"; };
+		3DB3D46321297F4700EE0149 /* ZYScrollAndViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYScrollAndViewViewController.m; sourceTree = "<group>"; };
+		3DB3D46421297F4700EE0149 /* ZYScrollAndViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYScrollAndViewViewController.xib; sourceTree = "<group>"; };
+		44BC2A4F0F3E719AA0A5634A /* Pods-ZYIQKeyboardManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYIQKeyboardManagerDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYIQKeyboardManagerDemo/Pods-ZYIQKeyboardManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		637888ED5296BBABAAA0ACF0 /* Pods-ZYIQKeyboardManagerDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYIQKeyboardManagerDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYIQKeyboardManagerDemoUITests/Pods-ZYIQKeyboardManagerDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AE629692E0D183AD9C64D26D /* Pods-ZYIQKeyboardManagerDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYIQKeyboardManagerDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYIQKeyboardManagerDemoTests/Pods-ZYIQKeyboardManagerDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		C6505A15598D72BED464A418 /* Pods-ZYIQKeyboardManagerDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYIQKeyboardManagerDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYIQKeyboardManagerDemoTests/Pods-ZYIQKeyboardManagerDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC388816F04343F01CD824FE /* libPods-ZYIQKeyboardManagerDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZYIQKeyboardManagerDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21B7183C6CBFB1AA9F35886 /* Pods-ZYIQKeyboardManagerDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYIQKeyboardManagerDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZYIQKeyboardManagerDemoUITests/Pods-ZYIQKeyboardManagerDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DB3D4242129765700EE0149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E055EFF547BDCCBC5A9198B9 /* libPods-ZYIQKeyboardManagerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB3D43C2129765900EE0149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94EEF45885442B60D066283B /* libPods-ZYIQKeyboardManagerDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB3D4472129765900EE0149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FD7CDCBD3AF7B7E4ABE3E07 /* libPods-ZYIQKeyboardManagerDemoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02F2BE962AB1F6A55B836C2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A3C10D081111CDCFEB2144B /* Pods-ZYIQKeyboardManagerDemo.debug.xcconfig */,
+				44BC2A4F0F3E719AA0A5634A /* Pods-ZYIQKeyboardManagerDemo.release.xcconfig */,
+				C6505A15598D72BED464A418 /* Pods-ZYIQKeyboardManagerDemoTests.debug.xcconfig */,
+				AE629692E0D183AD9C64D26D /* Pods-ZYIQKeyboardManagerDemoTests.release.xcconfig */,
+				F21B7183C6CBFB1AA9F35886 /* Pods-ZYIQKeyboardManagerDemoUITests.debug.xcconfig */,
+				637888ED5296BBABAAA0ACF0 /* Pods-ZYIQKeyboardManagerDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D1CB30F044226739DAFCB14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2515363CE7ADC281F2738119 /* libPods-ZYIQKeyboardManagerDemo.a */,
+				EC388816F04343F01CD824FE /* libPods-ZYIQKeyboardManagerDemoTests.a */,
+				1FB49EE1556E31362C907B54 /* libPods-ZYIQKeyboardManagerDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DB3D41E2129765700EE0149 = {
+			isa = PBXGroup;
+			children = (
+				3DB3D4292129765700EE0149 /* ZYIQKeyboardManagerDemo */,
+				3DB3D4422129765900EE0149 /* ZYIQKeyboardManagerDemoTests */,
+				3DB3D44D2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests */,
+				3DB3D4282129765700EE0149 /* Products */,
+				02F2BE962AB1F6A55B836C2D /* Pods */,
+				2D1CB30F044226739DAFCB14 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3DB3D4282129765700EE0149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3D4272129765700EE0149 /* ZYIQKeyboardManagerDemo.app */,
+				3DB3D43F2129765900EE0149 /* ZYIQKeyboardManagerDemoTests.xctest */,
+				3DB3D44A2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DB3D4292129765700EE0149 /* ZYIQKeyboardManagerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3D467212982A100EE0149 /* Expand */,
+				3DB3D45C2129790900EE0149 /* Modules */,
+				3DB3D42A2129765700EE0149 /* AppDelegate.h */,
+				3DB3D42B2129765700EE0149 /* AppDelegate.m */,
+				3DB3D42D2129765700EE0149 /* ViewController.h */,
+				3DB3D42E2129765700EE0149 /* ViewController.m */,
+				3DB3D45F21297A9000EE0149 /* ZYTableViewController.h */,
+				3DB3D46021297A9000EE0149 /* ZYTableViewController.m */,
+				3DB3D4302129765700EE0149 /* Main.storyboard */,
+				3DB3D4332129765800EE0149 /* Assets.xcassets */,
+				3DB3D4352129765800EE0149 /* LaunchScreen.storyboard */,
+				3DB3D4382129765800EE0149 /* Info.plist */,
+				3DB3D4392129765800EE0149 /* main.m */,
+			);
+			path = ZYIQKeyboardManagerDemo;
+			sourceTree = "<group>";
+		};
+		3DB3D4422129765900EE0149 /* ZYIQKeyboardManagerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3D4432129765900EE0149 /* ZYIQKeyboardManagerDemoTests.m */,
+				3DB3D4452129765900EE0149 /* Info.plist */,
+			);
+			path = ZYIQKeyboardManagerDemoTests;
+			sourceTree = "<group>";
+		};
+		3DB3D44D2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3D44E2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests.m */,
+				3DB3D4502129765900EE0149 /* Info.plist */,
+			);
+			path = ZYIQKeyboardManagerDemoUITests;
+			sourceTree = "<group>";
+		};
+		3DB3D45C2129790900EE0149 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3D45D2129791300EE0149 /* ScrollView */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3DB3D45D2129791300EE0149 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3D45E2129792100EE0149 /* ViewControllers */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		3DB3D45E2129792100EE0149 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3D46221297F4700EE0149 /* ZYScrollAndViewViewController.h */,
+				3DB3D46321297F4700EE0149 /* ZYScrollAndViewViewController.m */,
+				3DB3D46421297F4700EE0149 /* ZYScrollAndViewViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3DB3D467212982A100EE0149 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				3DB3D468212982A800EE0149 /* Header */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		3DB3D468212982A800EE0149 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DB3D4262129765700EE0149 /* ZYIQKeyboardManagerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DB3D4532129765900EE0149 /* Build configuration list for PBXNativeTarget "ZYIQKeyboardManagerDemo" */;
+			buildPhases = (
+				0C77E8AB0C9B51355FBD7AB0 /* [CP] Check Pods Manifest.lock */,
+				3DB3D4232129765700EE0149 /* Sources */,
+				3DB3D4242129765700EE0149 /* Frameworks */,
+				3DB3D4252129765700EE0149 /* Resources */,
+				D8A740B4DE25EC5211FA2390 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYIQKeyboardManagerDemo;
+			productName = ZYIQKeyboardManagerDemo;
+			productReference = 3DB3D4272129765700EE0149 /* ZYIQKeyboardManagerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DB3D43E2129765900EE0149 /* ZYIQKeyboardManagerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DB3D4562129765900EE0149 /* Build configuration list for PBXNativeTarget "ZYIQKeyboardManagerDemoTests" */;
+			buildPhases = (
+				C54DF783F6D3A51339B981A6 /* [CP] Check Pods Manifest.lock */,
+				3DB3D43B2129765900EE0149 /* Sources */,
+				3DB3D43C2129765900EE0149 /* Frameworks */,
+				3DB3D43D2129765900EE0149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DB3D4412129765900EE0149 /* PBXTargetDependency */,
+			);
+			name = ZYIQKeyboardManagerDemoTests;
+			productName = ZYIQKeyboardManagerDemoTests;
+			productReference = 3DB3D43F2129765900EE0149 /* ZYIQKeyboardManagerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3DB3D4492129765900EE0149 /* ZYIQKeyboardManagerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DB3D4592129765900EE0149 /* Build configuration list for PBXNativeTarget "ZYIQKeyboardManagerDemoUITests" */;
+			buildPhases = (
+				7179B725B6EE43ECFA8EACC3 /* [CP] Check Pods Manifest.lock */,
+				3DB3D4462129765900EE0149 /* Sources */,
+				3DB3D4472129765900EE0149 /* Frameworks */,
+				3DB3D4482129765900EE0149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DB3D44C2129765900EE0149 /* PBXTargetDependency */,
+			);
+			name = ZYIQKeyboardManagerDemoUITests;
+			productName = ZYIQKeyboardManagerDemoUITests;
+			productReference = 3DB3D44A2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DB3D41F2129765700EE0149 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "郑奕";
+				TargetAttributes = {
+					3DB3D4262129765700EE0149 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					3DB3D43E2129765900EE0149 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 3DB3D4262129765700EE0149;
+					};
+					3DB3D4492129765900EE0149 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 3DB3D4262129765700EE0149;
+					};
+				};
+			};
+			buildConfigurationList = 3DB3D4222129765700EE0149 /* Build configuration list for PBXProject "ZYIQKeyboardManagerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DB3D41E2129765700EE0149;
+			productRefGroup = 3DB3D4282129765700EE0149 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DB3D4262129765700EE0149 /* ZYIQKeyboardManagerDemo */,
+				3DB3D43E2129765900EE0149 /* ZYIQKeyboardManagerDemoTests */,
+				3DB3D4492129765900EE0149 /* ZYIQKeyboardManagerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DB3D4252129765700EE0149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB3D4372129765800EE0149 /* LaunchScreen.storyboard in Resources */,
+				3DB3D4342129765800EE0149 /* Assets.xcassets in Resources */,
+				3DB3D4322129765700EE0149 /* Main.storyboard in Resources */,
+				3DB3D46621297F4700EE0149 /* ZYScrollAndViewViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB3D43D2129765900EE0149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB3D4482129765900EE0149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C77E8AB0C9B51355FBD7AB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYIQKeyboardManagerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7179B725B6EE43ECFA8EACC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYIQKeyboardManagerDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C54DF783F6D3A51339B981A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYIQKeyboardManagerDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8A740B4DE25EC5211FA2390 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZYIQKeyboardManagerDemo/Pods-ZYIQKeyboardManagerDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZYIQKeyboardManagerDemo/Pods-ZYIQKeyboardManagerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DB3D4232129765700EE0149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB3D46121297A9000EE0149 /* ZYTableViewController.m in Sources */,
+				3DB3D42F2129765700EE0149 /* ViewController.m in Sources */,
+				3DB3D43A2129765800EE0149 /* main.m in Sources */,
+				3DB3D46521297F4700EE0149 /* ZYScrollAndViewViewController.m in Sources */,
+				3DB3D42C2129765700EE0149 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB3D43B2129765900EE0149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB3D4442129765900EE0149 /* ZYIQKeyboardManagerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DB3D4462129765900EE0149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DB3D44F2129765900EE0149 /* ZYIQKeyboardManagerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DB3D4412129765900EE0149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DB3D4262129765700EE0149 /* ZYIQKeyboardManagerDemo */;
+			targetProxy = 3DB3D4402129765900EE0149 /* PBXContainerItemProxy */;
+		};
+		3DB3D44C2129765900EE0149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DB3D4262129765700EE0149 /* ZYIQKeyboardManagerDemo */;
+			targetProxy = 3DB3D44B2129765900EE0149 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DB3D4302129765700EE0149 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DB3D4312129765700EE0149 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3DB3D4352129765800EE0149 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DB3D4362129765800EE0149 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DB3D4512129765900EE0149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3DB3D4522129765900EE0149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DB3D4542129765900EE0149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A3C10D081111CDCFEB2144B /* Pods-ZYIQKeyboardManagerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZAVR4N88T;
+				INFOPLIST_FILE = ZYIQKeyboardManagerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zy.vicki753.com.ZYIQKeyboardManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DB3D4552129765900EE0149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44BC2A4F0F3E719AA0A5634A /* Pods-ZYIQKeyboardManagerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZAVR4N88T;
+				INFOPLIST_FILE = ZYIQKeyboardManagerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zy.vicki753.com.ZYIQKeyboardManagerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3DB3D4572129765900EE0149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6505A15598D72BED464A418 /* Pods-ZYIQKeyboardManagerDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZAVR4N88T;
+				INFOPLIST_FILE = ZYIQKeyboardManagerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zy.vicki753.com.ZYIQKeyboardManagerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYIQKeyboardManagerDemo.app/ZYIQKeyboardManagerDemo";
+			};
+			name = Debug;
+		};
+		3DB3D4582129765900EE0149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE629692E0D183AD9C64D26D /* Pods-ZYIQKeyboardManagerDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZAVR4N88T;
+				INFOPLIST_FILE = ZYIQKeyboardManagerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zy.vicki753.com.ZYIQKeyboardManagerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYIQKeyboardManagerDemo.app/ZYIQKeyboardManagerDemo";
+			};
+			name = Release;
+		};
+		3DB3D45A2129765900EE0149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F21B7183C6CBFB1AA9F35886 /* Pods-ZYIQKeyboardManagerDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZAVR4N88T;
+				INFOPLIST_FILE = ZYIQKeyboardManagerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zy.vicki753.com.ZYIQKeyboardManagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZYIQKeyboardManagerDemo;
+			};
+			name = Debug;
+		};
+		3DB3D45B2129765900EE0149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 637888ED5296BBABAAA0ACF0 /* Pods-ZYIQKeyboardManagerDemoUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZAVR4N88T;
+				INFOPLIST_FILE = ZYIQKeyboardManagerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zy.vicki753.com.ZYIQKeyboardManagerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZYIQKeyboardManagerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DB3D4222129765700EE0149 /* Build configuration list for PBXProject "ZYIQKeyboardManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB3D4512129765900EE0149 /* Debug */,
+				3DB3D4522129765900EE0149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DB3D4532129765900EE0149 /* Build configuration list for PBXNativeTarget "ZYIQKeyboardManagerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB3D4542129765900EE0149 /* Debug */,
+				3DB3D4552129765900EE0149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DB3D4562129765900EE0149 /* Build configuration list for PBXNativeTarget "ZYIQKeyboardManagerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB3D4572129765900EE0149 /* Debug */,
+				3DB3D4582129765900EE0149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DB3D4592129765900EE0149 /* Build configuration list for PBXNativeTarget "ZYIQKeyboardManagerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DB3D45A2129765900EE0149 /* Debug */,
+				3DB3D45B2129765900EE0149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DB3D41F2129765700EE0149 /* Project object */;
+}

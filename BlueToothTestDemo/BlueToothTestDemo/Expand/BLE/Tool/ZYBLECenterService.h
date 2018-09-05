@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, ZYBLECenterServiceStatus) {
 
 @property (nonatomic, strong) NSMutableArray *peripheralInfo;
 
+
 //搜索设备信息，2秒后停止搜索
 -(void)scanDevicesSuccess:(void(^)(id result))success failure:(void(^)(NSError *error))failure;
 //中央连接外部设备

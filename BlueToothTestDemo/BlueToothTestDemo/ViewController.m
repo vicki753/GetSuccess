@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "ZYBluetoothServer.h"
+#import "ZYBLECentralManager.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) ZYBluetoothServer *bluetoothServer;
 
 @end
 
@@ -16,13 +20,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
 }
 
+#pragma mark - Event
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)startScanAction:(UIButton *)sender {
+    [self.bluetoothServer startScanerWithTimeout:100 success:^(id result) {
+        NSLog(@"startScanerWithTimeout ========== result %@", result);
+    } failure:^(NSError *error) {
+        NSLog(@"startScanerWithTimeout ======== error %@", error);
+    }];
+    
+}
+
+- (IBAction)stopScanAction:(UIButton *)sender {
+    
+}
+
+#pragma mark - Getter
+-(ZYBluetoothServer *)bluetoothServer {
+    if (!_bluetoothServer) {
+        _bluetoothServer = [[ZYBluetoothServer alloc] init];
+    }
+    return _bluetoothServer;
 }
 
 

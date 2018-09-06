@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class CBPeripheral;
 @interface ZYBluetoothServer : NSObject
 
 - (void)startScanerWithTimeout:(NSTimeInterval)timeout success:(void(^)(id result))success failure:(void(^)(NSError *error))failure;
 
 - (void)stopScannerSuccess:(void(^)(id result))success failure:(void(^)(NSError *error))failure;
+
+- (void)connectPeriperal:(CBPeripheral *)peripheral success:(void(^)(id result))success failure:(void(^)(NSError *error))failure;
 
 @end

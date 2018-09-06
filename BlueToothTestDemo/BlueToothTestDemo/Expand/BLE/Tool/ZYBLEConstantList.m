@@ -9,3 +9,7 @@
 #import "ZYBLEConstantList.h"
 
 NSString *ZYBLENotificationForCentralManagerDidUpdateState = @"ZYBLENotificationForCentralManagerDidUpdateState";
+
+NSString *ZYBLEServiceUUID = @"0000CF66";
+NSString *ZYBLENotifyUUID = @"0000CF65";
+NSString *ZYBLEWirteUUID = @"0000CF64";

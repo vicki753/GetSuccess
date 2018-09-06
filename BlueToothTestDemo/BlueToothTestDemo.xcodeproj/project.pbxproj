@@ -17,7 +17,6 @@
 		3DA8D8A4211AD8AA00EC8645 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8D8A3211AD8AA00EC8645 /* main.m */; };
 		3DA8D8AE211AD8AA00EC8645 /* BlueToothTestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8D8AD211AD8AA00EC8645 /* BlueToothTestDemoTests.m */; };
 		3DA8D8B9211AD8AA00EC8645 /* BlueToothTestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8D8B8211AD8AA00EC8645 /* BlueToothTestDemoUITests.m */; };
-		3DA8D8CB211BDD8F00EC8645 /* ZYBLECenterService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8D8CA211BDD8F00EC8645 /* ZYBLECenterService.m */; };
 		3DA8D8CF211BE1D900EC8645 /* ZYBLEPeripheralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DA8D8CE211BE1D900EC8645 /* ZYBLEPeripheralModel.m */; };
 		3DFE35A9213FB3CD00728F50 /* ZYBLEConstantList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE35A8213FB3CD00728F50 /* ZYBLEConstantList.m */; };
 		3DFE35AC213FBDE700728F50 /* ICBLEPeripheralModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DFE35AB213FBDE700728F50 /* ICBLEPeripheralModel.m */; };
@@ -63,8 +62,6 @@
 		3DA8D8B4211AD8AA00EC8645 /* BlueToothTestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueToothTestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA8D8B8211AD8AA00EC8645 /* BlueToothTestDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothTestDemoUITests.m; sourceTree = "<group>"; };
 		3DA8D8BA211AD8AA00EC8645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DA8D8C9211BDD8F00EC8645 /* ZYBLECenterService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYBLECenterService.h; sourceTree = "<group>"; };
-		3DA8D8CA211BDD8F00EC8645 /* ZYBLECenterService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYBLECenterService.m; sourceTree = "<group>"; };
 		3DA8D8CD211BE1D900EC8645 /* ZYBLEPeripheralModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYBLEPeripheralModel.h; sourceTree = "<group>"; };
 		3DA8D8CE211BE1D900EC8645 /* ZYBLEPeripheralModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYBLEPeripheralModel.m; sourceTree = "<group>"; };
 		3DFE35A7213FB3CD00728F50 /* ZYBLEConstantList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYBLEConstantList.h; sourceTree = "<group>"; };
@@ -169,8 +166,6 @@
 		3DA8D8C7211AD8D500EC8645 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				3DA8D8C9211BDD8F00EC8645 /* ZYBLECenterService.h */,
-				3DA8D8CA211BDD8F00EC8645 /* ZYBLECenterService.m */,
 				3DFE35AD213FC7ED00728F50 /* ZYBluetoothServer.h */,
 				3DFE35AE213FC7ED00728F50 /* ZYBluetoothServer.m */,
 				3D59762921203DAC009FD800 /* ZYBLEPeripheralManager.h */,
@@ -351,7 +346,6 @@
 				3D59762B21203DAC009FD800 /* ZYBLEPeripheralManager.m in Sources */,
 				3D00C5A9213F6CB200D10C9D /* ZYBLECentralManager.m in Sources */,
 				3DFE35AF213FC7ED00728F50 /* ZYBluetoothServer.m in Sources */,
-				3DA8D8CB211BDD8F00EC8645 /* ZYBLECenterService.m in Sources */,
 				3DFE35B3213FC9DE00728F50 /* NSTimer+ZY.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

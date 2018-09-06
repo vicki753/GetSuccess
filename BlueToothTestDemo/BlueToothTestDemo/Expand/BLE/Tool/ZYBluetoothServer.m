@@ -10,6 +10,7 @@
 #import "NSTimer+ZY.h"
 #import "ZYBLECentralManager.h"
 #import "ZYBLEPeripheralManager.h"
+#import <CoreBluetooth/CoreBluetooth.h>
 
 @interface ZYBluetoothServer ()
 
@@ -27,29 +28,47 @@
 
 
 @implementation ZYBluetoothServer
+
+-(void)dealloc {
+    if (_timer) {
+        [_timer invalidate];
+    }
+}
 - (void)startScanerWithTimeout:(NSTimeInterval)timeout success:(void(^)(id result))success failure:(void(^)(NSError *error))failure {
     self.timeout = timeout;
     [self startTimer];
-//    [self.centralManager scanPeripheralsWithPeripheralBlock:^(NSMutableArray *pinfos) {
-//        if (pinfos) {
-//            NSLog(@"pinfos == %@", pinfos);
-//        }else{
-//
-//            NSError *error = [[NSError alloc] initWithDomain:NSURLErrorDomain code:0 userInfo:nil];
-//            failure(error);
-//        }
-//    }];
+
     [self.centralManager scanPeripheralsWithPeripheralBlock:^(NSMutableArray *pinfos) {
-        
+        success(pinfos);
     } failureBlock:^(NSError *error) {
-        
+        failure(error);
     }];
     
 }
 
 - (void)stopScannerSuccess:(void(^)(id result))success failure:(void(^)(NSError *error))failure {
-    
+    [self stopTimer];
+    [self.centralManager cancelScanWithManagerStopBlock:^(CBCentralManager *manager) {
+        success(manager);
+    }];
 }
+
+- (void)connectPeriperal:(CBPeripheral *)peripheral success:(void(^)(id result))success failure:(void(^)(NSError *error))failure {
+    [self stopTimer];
+    __weak typeof(self) weakSelf = self;
+    [self stopScannerSuccess:^(id result) {
+        [weakSelf.centralManager connectToPeripheral:peripheral options:nil success:^(CBPeripheral *peripheral) {
+            NSLog(@"-----connected----success %@", peripheral.services.firstObject.characteristics.firstObject );
+            
+        } failure:^(CBPeripheral *peripheral, NSError *error) {
+            NSLog(@"-----connected----error %@", error);
+        }];
+    } failure:^(NSError *error) {
+        
+    }];
+  
+}
+
 
 
 #pragma mark 时间开启和暂停关闭
@@ -62,6 +81,7 @@
 - (void)stopTimer {
     self.repeatCount = 0;
     self.timer.fireDate = [NSDate distantFuture]; //停止定时器
+    [self.centralManager cancelAllPeripheralsConnection];
 }
 
 #pragma mark - Getter

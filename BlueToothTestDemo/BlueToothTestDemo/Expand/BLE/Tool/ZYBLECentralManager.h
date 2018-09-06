@@ -11,6 +11,8 @@
 
 @class CBPeripheral;
 @class CBCentralManager;
+typedef void(^kCallSuccessBackBlock)(id);
+typedef void(^kCallFailureBackBlock)(id peripheral,NSError*error);
 typedef void (^centralBluetoothFunctionStateBlock)(NSInteger state);
 typedef void(^scanPeripheralPeripheralBlock)(NSMutableArray *pinfos);
 typedef void(^scanPeripheralErrorBlock)(NSError *error);
@@ -46,15 +48,14 @@ typedef void(^centralManagerStopScanBlock)(CBCentralManager *manager);
     NSMutableArray *reConnectPeripherals;
 }
 
-// block
 @property (nonatomic, copy) centralBluetoothFunctionStateBlock stateBlock;
 
 // 扫描peripherals
--(void)scanPeripheralsWithPeripheralBlock:(scanPeripheralPeripheralBlock)block failureBlock:(scanPeripheralErrorBlock)failureBlock;
+-(void)scanPeripheralsWithPeripheralBlock:(scanPeripheralPeripheralBlock)successBlock failureBlock:(scanPeripheralErrorBlock)failureBlock;
 // 连接
-- (void)connectToPeripheral:(CBPeripheral *)peripheral options:(NSDictionary *)options;
+- (void)connectToPeripheral:(CBPeripheral *)peripheral options:(NSDictionary *)options success:(void (^)(CBPeripheral *peripheral))success failure:(void(^)(CBPeripheral *peripheral,NSError *error))failure;
 // 断开设备连接
-- (void)cancelPeripheralConnection:(CBPeripheral *)peripheral;
+- (void)cancelPeripheralConnection:(CBPeripheral *)peripheral success:(void (^)(CBPeripheral *peripheral))success failure:(void(^)(CBPeripheral *peripheral,NSError *error))failure;
 // 断开所有连接的设备
 - (void)cancelAllPeripheralsConnection;
 // 停止扫描

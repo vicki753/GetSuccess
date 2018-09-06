@@ -9,3 +9,7 @@
 #import <Foundation/Foundation.h>
 
 FOUNDATION_EXPORT NSString *ZYBLENotificationForCentralManagerDidUpdateState;
+
+FOUNDATION_EXPORT NSString *ZYBLEServiceUUID;
+FOUNDATION_EXPORT NSString *ZYBLENotifyUUID;
+FOUNDATION_EXPORT NSString *ZYBLEWirteUUID;

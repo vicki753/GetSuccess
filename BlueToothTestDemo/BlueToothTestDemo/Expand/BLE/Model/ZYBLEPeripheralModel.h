@@ -8,6 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class CBPeripheral;
+@class CBUUID;
 @interface ZYBLEPeripheralModel : NSObject
+
+@property (nonatomic, strong)CBPeripheral *peripheral;
+
+@property (nonatomic, strong)CBUUID *identifer;
+
+@property (nonatomic, strong)CBUUID *serviceUUID;
+
+@property (nonatomic, strong)CBUUID *notifyUUID;
+
+@property (nonatomic, strong)CBUUID *writeUUID;
+
 
 @end

@@ -11,12 +11,15 @@
 
 @class CBPeripheral;
 @class CBCentralManager;
+@class ZYBLEPeripheralModel;
 typedef void(^kCallSuccessBackBlock)(id);
 typedef void(^kCallFailureBackBlock)(id peripheral,NSError*error);
 typedef void (^centralBluetoothFunctionStateBlock)(NSInteger state);
 typedef void(^scanPeripheralPeripheralBlock)(NSMutableArray *pinfos);
 typedef void(^scanPeripheralErrorBlock)(NSError *error);
 typedef void(^centralManagerStopScanBlock)(CBCentralManager *manager);
+
+typedef void(^connectedAllPeripheralBlock)(NSArray<ZYBLEPeripheralModel *> *peripherals);
 
 @interface ZYBLECentralManager : NSObject
 {
@@ -49,6 +52,8 @@ typedef void(^centralManagerStopScanBlock)(CBCentralManager *manager);
 }
 
 @property (nonatomic, copy) centralBluetoothFunctionStateBlock stateBlock;
+
+@property (nonatomic, copy) connectedAllPeripheralBlock allPeriperalsBlock;
 
 // 扫描peripherals
 -(void)scanPeripheralsWithPeripheralBlock:(scanPeripheralPeripheralBlock)successBlock failureBlock:(scanPeripheralErrorBlock)failureBlock;

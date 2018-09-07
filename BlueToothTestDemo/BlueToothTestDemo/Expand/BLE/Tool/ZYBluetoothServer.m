@@ -12,6 +12,7 @@
 #import "ZYBLEPeripheralManager.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
+
 @interface ZYBluetoothServer ()
 
 @property (nonatomic, strong) ZYBLECentralManager *centralManager;
@@ -63,13 +64,14 @@
         } failure:^(CBPeripheral *peripheral, NSError *error) {
             NSLog(@"-----connected----error %@", error);
         }];
+        
+        [weakSelf.centralManager setAllPeriperalsBlock:^(NSArray<ZYBLEPeripheralModel *> *peripherals) {
+            NSLog(@"setAllPeriperalsBlock peripherals = %@", peripherals);
+        }];
     } failure:^(NSError *error) {
         
     }];
-  
 }
-
-
 
 #pragma mark 时间开启和暂停关闭
 // 发送验证码开启

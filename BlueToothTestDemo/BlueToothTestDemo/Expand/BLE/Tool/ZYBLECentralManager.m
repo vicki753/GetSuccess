@@ -9,6 +9,7 @@
 #import "ZYBLECentralManager.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "ZYBLEConstantList.h"
+#import "ZYBLEPeripheralModel.h"
 
 @interface ZYBLECentralManager ()
 <
@@ -18,17 +19,14 @@ CBPeripheralDelegate
 
 @property (nonatomic, strong)CBCentralManager *centralManager;
 
-// block
 @property (nonatomic, copy) scanPeripheralPeripheralBlock scanPeripheralBlock;
 @property (nonatomic, copy) scanPeripheralErrorBlock scanFailureBlock;
 
-// successBlockNarray
 @property (nonatomic, strong) NSMutableDictionary *successPeripheralBlock;
 @property (nonatomic, strong) NSMutableDictionary *failurePeripheralBlock;
 
-@property (nonatomic, copy) NSString *serviceUUID;
-@property (nonatomic, copy) NSString *notifyUUID;
-@property (nonatomic, copy) NSString *writeUUID;
+@property (nonatomic, strong)ZYBLEPeripheralModel *currentPeripheral;
+@property (nonatomic, strong) NSMutableArray <ZYBLEPeripheralModel *> *peripheralModels;
 
 @end
 
@@ -222,6 +220,9 @@ CBPeripheralDelegate
             [self removeBlockKey:peripheral.identifier.UUIDString];
         }
         [peripheral discoverServices:nil];
+        // 称为当前连接的设备
+        self.currentPeripheral.peripheral = peripheral;
+        self.currentPeripheral.identifer = peripheral.identifier;
     }
    
 }
@@ -267,18 +268,56 @@ CBPeripheralDelegate
 
 -(void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
      NSLog(@"didDiscoverCharacteristicsForService peripheral %@ for Service  %@ with error: %@", peripheral,service,error);
-    self.serviceUUID = service.UUID.UUIDString;
+    self.currentPeripheral.serviceUUID = service.UUID;
     for (CBCharacteristic *characteristic  in service.characteristics) {
         if ([[characteristic.UUID.UUIDString substringToIndex:8] isEqualToString:ZYBLENotifyUUID]) {
-            self.notifyUUID = characteristic.UUID.UUIDString;
+            self.currentPeripheral.notifyUUID = characteristic.UUID;
+            self.currentPeripheral.notifyCharacteristic = characteristic;
         }
         
         if ([[characteristic.UUID.UUIDString substringToIndex:8] isEqualToString:ZYBLEWirteUUID]) {
-            self.writeUUID = characteristic.UUID.UUIDString;
+            self.currentPeripheral.writeUUID = characteristic.UUID;
+            self.currentPeripheral.writeCharacteristic = characteristic;
         }
     }
     
-     NSLog(@"didDiscoverCharacteristicsForService self.serviceUUID %@ self.notifyUUID  %@  self.writeUUID %@", self.serviceUUID,self.notifyUUID,self.writeUUID);
+     NSLog(@"didDiscoverCharacteristicsForService self.serviceUUID %@ self.notifyUUID  %@  self.writeUUID %@", self.currentPeripheral.serviceUUID,self.currentPeripheral.notifyUUID, self.currentPeripheral.writeUUID);
+    
+    if (![self.peripheralModels containsObject:self.currentPeripheral]) {
+        [self.peripheralModels addObject:self.currentPeripheral];
+    }
+    if (_allPeriperalsBlock) {
+         _allPeriperalsBlock(self.peripheralModels);
+    }
+    // 开始读取数据
+    if (self.currentPeripheral.notifyCharacteristic) {
+        [self.currentPeripheral.peripheral readValueForCharacteristic:self.currentPeripheral.notifyCharacteristic];
+    }
+}
+
+
+-(void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    if ([self.currentPeripheral.peripheral isEqual:peripheral]) {
+        NSLog(@"characteristic === service %@",characteristic.service);
+        NSLog(@"characteristic === value %@", characteristic.value);
+        NSLog(@"characteristic === valueToString = %@", characteristic.value.description);
+        NSLog(@"characteristic === uuid %@", characteristic.UUID);
+        NSLog(@"characteristic === properties %ld",characteristic.properties);
+        NSLog(@"characteristic === descriptors %@",characteristic.descriptors);
+       
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [peripheral readValueForCharacteristic:characteristic];
+        });
+       
+    }
+}
+
+
+-(void)peripheral:(CBPeripheral *)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error {
+    if ([self.currentPeripheral.peripheral isEqual:peripheral]) {
+    
+    }
+    [peripheral readValueForCharacteristic:characteristic];
 }
 
 -(void)peripheral:(CBPeripheral *)peripheral didModifyServices:(NSArray<CBService *> *)invalidatedServices {
@@ -301,6 +340,22 @@ CBPeripheralDelegate
 - (void)removeBlockKey:(NSString *)key {
     [_successPeripheralBlock removeObjectForKey:key];
     [_failurePeripheralBlock removeObjectForKey:key];
+}
+
+
+#pragma mark - Getter
+-(ZYBLEPeripheralModel *)currentPeripheral {
+    if (!_currentPeripheral) {
+        _currentPeripheral = [[ZYBLEPeripheralModel alloc] init];
+    }
+    return _currentPeripheral;
+}
+
+- (NSMutableArray<ZYBLEPeripheralModel *> *)peripheralModels {
+    if (!_peripheralModels) {
+        _peripheralModels = [NSMutableArray array];
+    }
+    return _peripheralModels;
 }
 
 @end

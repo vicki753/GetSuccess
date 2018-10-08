@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface ZYBLEPeripheralManager : NSObject <CBPeripheralManagerDelegate>
+@interface ZYBLEPeripheralManager : NSObject 
 
 
 /**

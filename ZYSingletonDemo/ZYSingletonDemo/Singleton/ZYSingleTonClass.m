@@ -8,6 +8,13 @@
 
 #import "ZYSingleTonClass.h"
 
+static ZYSingleTonClass *instance = nil;
+
+@interface ZYSingleTonClass ()
+<NSCopying>
+
+@end
+
 @implementation ZYSingleTonClass
 
 + (instancetype)fisrtSharenIncetance {
@@ -39,6 +46,14 @@ static id objc = nil;
     return objc;
 }
 
++(instancetype)thirdSharenInstance {
+    if (instance == nil) {
+        instance = [[super allocWithZone:NULL] init];
+    }
+    return instance;
+}
+
+
 -(instancetype)init {
     if (self = [super init]) {
         NSLog(@"创建啦！！！");
@@ -46,6 +61,20 @@ static id objc = nil;
     }
     return self;
 }
+
+
++(instancetype)allocWithZone:(struct _NSZone *)zone {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [super allocWithZone:zone];
+    });
+    return instance;
+}
+
+-(id)copyWithZone:(NSZone *)zone {
+    return instance;
+}
+
 
 
 @end

@@ -16,5 +16,6 @@
 
 + (instancetype)secondSharenInstance;
 
++(instancetype)thirdSharenInstance;
 
 @end
